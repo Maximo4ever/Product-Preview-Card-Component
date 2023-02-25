@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: hsl(30, 38%, 92%);
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.article {
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.article__header picture {
+  width: 400px;
+  object-fit: cover;
+  display: flex;
+}
+.article__header img {
+  width: 100%;
+}
+.article__footer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 28px;
+  padding: 42px;
+}
+.article__footer > span {
+  color: var(--Dark-grayish-blue);
+  letter-spacing: 4px;
+}
+.article__footer h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 40px;
+  line-height: 1;
+}
+.article__footer p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--Dark-grayish-blue);
+}
+.article__footer__prices {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  margin-bottom: 10px;
+}
+.article__footer .price {
+  font-family: 'Fraunces', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--Dark-cyan);
+}
+.article__footer__prices .price-before {
+  text-decoration: line-through;
+  color: var(--Dark-grayish-blue);
+}
+.article__footer .btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Dark-cyan);
+  padding: 20px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  column-gap: 15px;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color .4s;
+}
+.article__footer .btn:hover {
+  background-color: #1a4031;
+}
+.article__footer .btn img {
+  width: 22px;
+}
+
+@media (max-width: 850px) {
+  .article {
+    max-width: 460px;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+  .article__header picture {
+    width: 100%;
+  }
+  .article__footer {
+    padding: 24px;
+    row-gap: 15px
+  }
+  .article__footer > span {
+    letter-spacing: 3px;
+    font-size: 14px;
+  }
+  .article__footer h1, .article__footer .price {
+    font-size: 36px;
+  }
+  .article__footer .btn {
+    padding-block: 17px;
+  }
+}
